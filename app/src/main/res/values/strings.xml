@@ -5,4 +5,9 @@
     <string name="add_task_for_today">Add task for today</string>
     <string name="date">Date:</string>
     <string name="textview">TextView</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="i_m_done_add_this_task">I\'m done.Add this task!</string>
+    <string name="add">Add</string>
+    <string name="enter_task">Enter task</string>
 </resources>
