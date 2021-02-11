@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C3F8C5"
+    android:background="@drawable/unnamed"
     android:textAlignment="center"
 
     tools:context=".HelloScreen">
@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="188dp"
         android:text="@string/just_do_it"
+        android:textColor="#FFEB3B"
         android:textSize="36sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"

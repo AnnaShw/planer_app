@@ -2,4 +2,7 @@
     <string name="app_name">planer_app</string>
     <string name="just_do_it">Just do it!</string>
     <string name="todo">TODO</string>
+    <string name="add_task_for_today">Add task for today</string>
+    <string name="date">Date:</string>
+    <string name="textview">TextView</string>
 </resources>
