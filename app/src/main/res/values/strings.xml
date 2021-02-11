@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">planer_app</string>
+    <string name="just_do_it">Just do it!</string>
+    <string name="todo">TODO</string>
+</resources>
