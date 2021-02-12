@@ -25,11 +25,14 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import android.widget.ListView;
+
+import org.w3c.dom.Node;
+
 import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
     //variables
-    ImageButton save;
+    ImageButton save,delete;
     EditText name;
     ArrayAdapter arrayAdapter;
     LinkedList<String>lst;
@@ -41,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         lst = new LinkedList<String>();
         //Display current date
         TextView textView = findViewById(R.id.displayDate);
@@ -50,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
 
         name = findViewById(R.id.taskInput);
         Lview = findViewById(R.id.listView);
+
+        //add some task
+
         save=findViewById(R.id.addTask);
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,9 +70,24 @@ public class MainActivity extends AppCompatActivity {
                 Lview.refreshDrawableState();
             }
         });
-
-        //Here we open fragment by clicking on Add task button
+        //Delete some task
+        delete=findViewById(R.id.deleteTask);
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(lst.size()>0){
+                    lst.remove(name.getText().toString());
+                    arrayAdapter=new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1, lst);
+                    Lview.setAdapter(arrayAdapter);
+                    arrayAdapter.notifyDataSetChanged();
+                    Lview.invalidateViews();
+                    Lview.refreshDrawableState();
+                }else{
+                    Toast.makeText(MainActivity.this, "Task list already empty", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        }
 
 
     }
-}
