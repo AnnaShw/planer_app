@@ -13,7 +13,6 @@
         android:id="@+id/imageView"
         android:layout_width="192dp"
         android:layout_height="182dp"
-        android:contentDescription="@string/todo"
         android:src="@drawable/address_book"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
