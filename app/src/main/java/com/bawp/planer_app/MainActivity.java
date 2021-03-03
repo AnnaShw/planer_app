@@ -7,6 +7,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -105,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
         Lview.invalidateViews();
         Lview.refreshDrawableState();
     }
+
 
 
 }
